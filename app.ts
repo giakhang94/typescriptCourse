@@ -1,48 +1,17 @@
-// const person: {
-//   name: string;
-//   age: number;
-// } = {
-//=======================TUPLES TYPES and OBJECT TYPE=====================
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string];
-// } = {
-//   name: "Khang",
-//   age: 29,
-//   hobbies: ["sports", "cooking"],
-//   role: [12, "author"],
-// };
-//====================================ENUMS TYPE===========================
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
+let userInput: unknown;
 
-enum Role {
-  TAO = 1,
-  ADMIN = "ahihi",
-  READ_ONLY = 1,
-  AUTHOR = "ahihi",
-}
+userInput = 5;
+userInput = "max";
+let userName: any;
 
-const person = {
-  name: "Khang",
-  age: 29,
-  hobbies: ["photographing", "cooking"],
-  role: Role.AUTHOR,
-};
-if (person.role === Role.AUTHOR) {
-  console.log("role author: ", Role.AUTHOR);
-}
+// userName = userInput; //error: unknown is not assignable to a string
+userInput = ["1", "2"];
+// userInput[0] = 1; // error: userInput is unknow
 
-let favoriteActivities: string[];
-favoriteActivities = ["sports"];
-// person.role.push("admin"); //push is allowed in tuples
-//person.role[2] = anythin // this will throw an error. can add more index in tuples, except push method
-// console.log(person.role);
+userInput = 1;
+userName = userInput;
 
-for (const hobby of person.hobbies) {
-  console.log(hobby);
-  //   console.log(hooby.map()) !!! Error
-}
+let userInput2: unknown;
+userInput2 = 2;
+
+// console.log(userInput + userInput2); // Lỗi luôn k cho cộng không cho làm gì hết
